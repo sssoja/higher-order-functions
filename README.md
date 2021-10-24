@@ -12,11 +12,11 @@ const timeFuncRuntime = funcParameter => {
 }
 ```
 
-<code>const addOneToOne = () => 1 + 1;</code>
+<p><code>const addOneToOne = () => 1 + 1;</code></p>
 
- <code>
+<p><code>
 timeFuncRuntime(addOneToOne);
-</code>
+</code></p>
 
 <p>We wrote a higher-order function, <code>timeFuncRuntime()</code>. It takes in a function as an argument, saves a starting time, invokes the callback function, records the time after the function was called, and returns the time the function took to run by subtracting the starting time from the ending time.</p>
 
