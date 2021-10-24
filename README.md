@@ -3,16 +3,18 @@
 
 When we pass a function in as an argument to another function, we don’t invoke it. Invoking the function would evaluate to the return value of that function call. With callbacks, we pass in the function itself by typing the function name without the parentheses (that would evaluate to the result of calling the function):
 
-<code>
+```
 const timeFuncRuntime = funcParameter => {
    let t1 = Date.now();
    funcParameter();
    let t2 = Date.now();
    return t2 - t1;
 }
- 
-const addOneToOne = () => 1 + 1;
- 
+```
+
+<code>const addOneToOne = () => 1 + 1;</code>
+
+ <code>
 timeFuncRuntime(addOneToOne);
 </code>
 
@@ -20,13 +22,13 @@ timeFuncRuntime(addOneToOne);
 
 <p>We then invoked <code>timeFuncRuntime()</code> first with the <code>addOneToOne()</code> function - note how we passed in <code>addOneToOne</code> and did not invoke it.</p>
 
-<code>
+```
 timeFuncRuntime(() => {
   for (let i = 10; i>0; i--){
     console.log(i);
   }
 });
-</code>
+```
 
 <p>
 In this example, we invoked <code>timeFuncRuntime()</code> with an anonymous function that counts backwards from 10. Anonymous functions can be arguments too!
